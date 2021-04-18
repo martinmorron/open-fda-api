@@ -20,6 +20,8 @@ import static java.util.Collections.emptyList;
 public class OpenFdaService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(OpenFdaService.class);
+    private static final String MANUFACTURER_QUERY_PARAM_FORMAT = "openfda.manufacturer_name:'%s'";
+    private static final String BRAND_QUERY_PARAM_FORMAT = "openfda.brand_name:'%s'";
 
     private final String basicUrl;
     private final RestTemplate restTemplate;
@@ -38,13 +40,13 @@ public class OpenFdaService {
     }
 
     public PageImpl<Result> getByManufacturerName(final String manufacturerName, final Pageable pageable) {
-        UriComponentsBuilder uriBuilder = buildSearchUri(manufacturerName, pageable, "openfda.manufacturer_name:'%s'");
+        UriComponentsBuilder uriBuilder = buildSearchUri(manufacturerName, pageable, MANUFACTURER_QUERY_PARAM_FORMAT);
 
         return fetchResults(pageable, uriBuilder);
     }
 
     public PageImpl<Result> getByBrandName(final String brandName, final Pageable pageable) {
-        UriComponentsBuilder uriBuilder = buildSearchUri(brandName, pageable, "openfda.brand_name:'%s'");
+        UriComponentsBuilder uriBuilder = buildSearchUri(brandName, pageable, BRAND_QUERY_PARAM_FORMAT);
 
         return fetchResults(pageable, uriBuilder);
     }

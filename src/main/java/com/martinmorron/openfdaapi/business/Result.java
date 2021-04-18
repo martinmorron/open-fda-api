@@ -10,12 +10,19 @@ import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @Generated("jsonschema2pojo")
 public class Result {
 
     @JsonProperty("submissions")
+    @Builder.Default
     private List<Submission> submissions = null;
     @JsonProperty("application_number")
     private String applicationNumber;
@@ -24,8 +31,10 @@ public class Result {
     @JsonProperty("openfda")
     private Openfda openfda;
     @JsonProperty("products")
+    @Builder.Default
     private List<Product> products = null;
     @JsonIgnore
+    @Builder.Default
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     @JsonProperty("submissions")

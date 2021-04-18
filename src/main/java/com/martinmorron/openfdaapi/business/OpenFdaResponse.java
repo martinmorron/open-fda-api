@@ -1,16 +1,15 @@
 package com.martinmorron.openfdaapi.business;
 
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 
 import java.util.List;
 
-@Getter(value = AccessLevel.PACKAGE)
-@RequiredArgsConstructor(access = AccessLevel.PACKAGE)
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 class OpenFdaResponse {
 
-    private final Meta meta;
-    private final List<Result> results;
+    private Meta meta;
+    private List<Result> results;
 
 }
