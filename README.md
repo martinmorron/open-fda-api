@@ -6,6 +6,7 @@ by Martin Angel Morrongiello
 ##### Pre-requisites
 
 * Docker (https://docs.docker.com/engine/install/) & Docker compose (https://docs.docker.com/compose/install/)
+* Tested with docker-compose version 1.29.0
 
 ##### Run
 
