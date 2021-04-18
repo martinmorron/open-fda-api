@@ -1,0 +1,6 @@
+{
+  "applicationNumber" : "12415",
+  "manufacturerName": ["manu1", "manu2"],
+  "substanceName": ["sus1", "sus2", "sus3"],
+  "productNumbers": ["num1", "num2", "num3"]
+}
